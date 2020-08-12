@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BMItester</string>
+    <string name="bmicheacker">BMIcheacker</string>
+    <string name="mans">남자</string>
+    <string name="women">여자</string>
+    <string name="check">확인하기</string>
+    <string name="hegch">여기에 키입력(cm)</string>
+    <string name="wegch">여기에 몸무게입력(kg)</string>
+    <string name="reset">다시측정하기</string>
+</resources>
