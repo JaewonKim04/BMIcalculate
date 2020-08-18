@@ -31,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText heg=(EditText)findViewById(R.id.heg);                //키를 받는 EditText
         RadioGroup Gender =(RadioGroup)findViewById(R.id.gender);          //성별을 받는 RadioGroup
 
-
-
-        RadioGroup.OnCheckedChangeListener radiocheck=new RadioGroup.OnCheckedChangeListener(){   //성별 체크 시작
+        Gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){   //성별 체크 시작
             @Override
             public void onCheckedChanged(RadioGroup radioGroup,@IdRes int i)
             {
@@ -45,11 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 {
                     RadioCheck=2;                                       //변수를 2로 변경
                 }
-                                                    //둘다 아니면 변수는 0으로 유지
+                //둘다 아니면 변수는 0으로 유지
             }
-        };
-        Gender.setOnCheckedChangeListener(radiocheck);
-        Button.OnClickListener onClickListener = new Button.OnClickListener() //체크 시작버튼을 누르면
+        });
+        cheack.setOnClickListener(new Button.OnClickListener() //체크 시작버튼을 누르면
         {
             @Override
             public void onClick(View v) {
@@ -79,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-        };
-        cheack.setOnClickListener(onClickListener);
+        });
 
 
 

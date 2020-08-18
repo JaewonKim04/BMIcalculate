@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class ResertActivity extends AppCompatActivity {
 
 
-    Button restart;
+
     ImageView fact;
     TextView repeat;
     @Override
@@ -21,8 +21,7 @@ public class ResertActivity extends AppCompatActivity {
     {
     super.onCreate(savedInstanceState);
         setContentView(R.layout.finalview_sub);
-
-        restart=(Button)findViewById(R.id.restart);
+        Button restart=(Button)findViewById(R.id.restart);
         fact=(ImageView)findViewById(R.id.fact);
         repeat=(TextView)findViewById(R.id.Repeat);
         fact.setImageResource(R.drawable.loading);
@@ -72,7 +71,7 @@ public class ResertActivity extends AppCompatActivity {
             }
         }
 
-        Button.OnClickListener resetButton=new Button.OnClickListener() //재시작 버튼을 누르면
+        restart.setOnClickListener(new Button.OnClickListener() //재시작 버튼을 누르면
         {
             Intent intent=new Intent(getApplicationContext(),MainActivity.class);
             @Override
@@ -84,8 +83,7 @@ public class ResertActivity extends AppCompatActivity {
                 startActivity(intent);                   //매인액티비티를 시작한다
 
             }
-        };
-        restart.setOnClickListener(resetButton);
+        });
 
 
     }
